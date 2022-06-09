@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="style.css" rel="stylesheet" />
+        <title>Jogo da Forca</title>
+    </head>
+    <body>
+        <header>
+         <nbsp><img src="imagens/logoalura.png" alt="Logo da alura com a inicial da letra a">
+        </header> 
+        <main>
+        <h3 id="titulo">Jogo da Forca</h3>
+        <h4> Digite no teclado uma letra e descubra a palavra!</h4>
+        <div class="jogo-container">
+         <div class="forca-container">    
+          <svg height="250" width="200" class="forca">
+             <!--Forca-->
+            <line x1="60" y1="20" x2="140" y2="20" />    
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
+            <!-- Cabeça -->    
+            <circle cx="140" cy="70" r="20" class="forca-parte" />
+            <!-- Corpo -->   
+            <line x1="140" y1="90" x2="140" y2="150" class="forca-parte"/>
+            <!-- Braços-->    
+            <line x1="140" y1="120" x2="120" y2="100" class="forca-parte"/>
+            <line x1="140" y1="120" x2="160" y2="100" class="forca-parte" />
+            <!-- Pernas-->    
+            <line x1="140" y1="150" x2="120" y2="180" class="forca-parte"/>
+            <line x1="140" y1="150" x2="160" y2="180" class="forca-parte" />
+           </svg>
+         </div>
+
+            <div class="letras-erradas-container">
+             <h4>Letras erradas</h4>
+            </div>
+        </div>
+            <div class="palavra-secreta-container"></div>
+            <div class="aviso-palavra-repetida"> 
+               Você já usou essa letra!  
+            </div>
+                  
+            <div class="popup-container"> 
+               <div class="popup">
+                <h4 id="mensagem"></h4>
+                <button id="btn-jogar" onclick="reiniciarJogo()">Jogar novamente</button>   
+               </div>
+            </div>
+
+        <script src="script.js"></script> 
+       </main>
+        
+    </body>
+</html>
